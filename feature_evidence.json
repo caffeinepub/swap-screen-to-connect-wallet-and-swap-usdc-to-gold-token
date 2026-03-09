@@ -1,0 +1,25 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-swap-screen-wallet-connection-controls-to-present-multiple-wallet-login-options-including-an-explicit-metamask-option-while-keeping-internet-identity-as-the-only-functional-authentication-method-and-clearly-indicating-in-the-ui-that-metamask-is-not-currently-supported",
+      "featureTitle": "Update the Swap screen wallet connection controls to present multiple wallet/login options (including an explicit MetaMask option) while keeping Internet Identity as the only functional authentication method, and clearly indicating in the UI that MetaMask is not currently supported.",
+      "files": [
+        "frontend/src/features/swap/SwapPage.tsx",
+        "frontend/src/features/swap/components/WalletControls.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

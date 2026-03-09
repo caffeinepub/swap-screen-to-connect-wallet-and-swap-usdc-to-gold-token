@@ -1,0 +1,12 @@
+{
+  "frontend/src/index.css": "Global styles with warm metallic gold and dark neutral OKLCH color palette for light and dark modes, avoiding blue/purple tones.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom fonts, warm metallic color tokens, custom border radius, glow shadows, and fade-in animations.",
+  "frontend/src/App.tsx": "Root application component that wraps the swap page with ThemeProvider and Toaster for notifications.",
+  "frontend/src/features/swap/SwapPage.tsx": "Main swap page layout with responsive header that accommodates the expanded wallet controls with provider selection, maintaining the existing visual theme and functionality.",
+  "frontend/src/features/swap/components/WalletControls.tsx": "Wallet connection component with provider selection (Internet Identity and MetaMask) using segmented buttons, where Internet Identity is fully functional and MetaMask shows as unsupported with tooltips and disabled state.",
+  "frontend/src/features/swap/components/BalancesPanel.tsx": "Displays user's USDC and GOLD balances with token icons in a card layout.",
+  "frontend/src/features/swap/components/SwapForm.tsx": "Main swap interface with USDC input, GOLD output preview, rate display, and swap execution button with validation.",
+  "frontend/src/features/swap/components/QuotePreview.tsx": "Displays the current exchange rate between USDC and GOLD tokens.",
+  "frontend/src/features/swap/components/ProfileSetupDialog.tsx": "Modal dialog for first-time user profile setup requiring name input before accessing the app.",
+  "frontend/src/features/swap/hooks/useSwapData.ts": "React Query hooks for all swap-related backend operations including profile management, balance fetching, quote retrieval, and swap execution."
+}

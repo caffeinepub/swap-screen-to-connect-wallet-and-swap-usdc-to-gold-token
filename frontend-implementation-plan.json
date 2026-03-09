@@ -1,0 +1,30 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Swap page wallet provider selection UI (Internet Identity functional; MetaMask unavailable)",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "summary": "Add a provider selection control to Swap wallet connection UI with Internet Identity working and MetaMask explicitly shown as unsupported, without changing existing Internet Identity hooks.",
+      "acceptanceCriteria": [
+        "On the Swap page, the wallet connection area includes a provider selection UI (e.g., dropdown, segmented control, or modal) with at least: Internet Identity and MetaMask.",
+        "Selecting Internet Identity enables the existing connect/disconnect flow and continues to work end-to-end with the current swap functionality.",
+        "Selecting MetaMask does not attempt any MetaMask/Web3 connection; instead it shows an inline message (in English) such as “MetaMask login is not supported in this app yet.” and/or disables the option with an explanatory tooltip.",
+        "The existing Internet Identity hooks and immutable hook files are not modified.",
+        "The UI remains responsive on mobile and desktop and matches the existing visual theme."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/features/swap/components/WalletControls.tsx",
+          "operation": "modify",
+          "description": "Replace the single connect button UI with a provider selection control (segmented buttons using the existing shadcn-ui Button component) offering at least Internet Identity and MetaMask. Keep Internet Identity as the only functional flow by reusing the current login/clear logic unchanged when the Internet Identity provider is selected; when MetaMask is selected, do not invoke any Web3 logic and instead disable the connect action and show an inline English message indicating MetaMask is not supported yet. Ensure disconnect remains available when already authenticated, and keep styling consistent with existing theme. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/features/swap/SwapPage.tsx",
+          "operation": "modify",
+          "description": "Adjust the header layout/wrapping to accommodate the expanded WalletControls (provider selector + button + message) while remaining responsive on mobile and desktop (e.g., allow wrapping/stacking at small widths) and preserving the existing visual theme."
+        }
+      ]
+    }
+  ]
+}

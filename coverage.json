@@ -1,0 +1,41 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-06T10:47:14.146Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-6",
+        "summary": "Update the Swap screen wallet connection controls to present multiple wallet/login options (including an explicit MetaMask option) while keeping Internet Identity as the only functional authentication method, and clearly indicating in the UI that MetaMask is not currently supported.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/features/swap/components/WalletControls.tsx",
+          "frontend/src/features/swap/SwapPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/features/swap/components/WalletControls.tsx",
+          "frontend/src/features/swap/SwapPage.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/features/swap/SwapPage.tsx",
+    "frontend/src/features/swap/components/WalletControls.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

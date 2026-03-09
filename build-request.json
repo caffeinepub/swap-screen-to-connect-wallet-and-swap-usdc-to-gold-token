@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Add wallet provider selection UI (Internet Identity supported; MetaMask shown as unavailable)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "text": "Update the Swap screen wallet connection controls to present multiple wallet/login options (including an explicit MetaMask option) while keeping Internet Identity as the only functional authentication method, and clearly indicating in the UI that MetaMask is not currently supported.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages-4"
+        ],
+        "quotes": [
+          "upgrade wallet with option to login with metamask etc"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On the Swap page, the wallet connection area includes a provider selection UI (e.g., dropdown, segmented control, or modal) with at least: Internet Identity and MetaMask.",
+        "Selecting Internet Identity enables the existing connect/disconnect flow and continues to work end-to-end with the current swap functionality.",
+        "Selecting MetaMask does not attempt any MetaMask/Web3 connection; instead it shows an inline message (in English) such as “MetaMask login is not supported in this app yet.” and/or disables the option with an explanatory tooltip.",
+        "The existing Internet Identity hooks and immutable hook files are not modified.",
+        "The UI remains responsive on mobile and desktop and matches the existing visual theme."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not add or integrate MetaMask (or any third-party wallet) authentication/connection; only Internet Identity is supported.",
+    "Do not modify files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or any files under frontend/src/components/ui."
+  ],
+  "nonGoals": [
+    "Implementing actual MetaMask login, wallet connection, transaction signing, or Web3 provider logic.",
+    "Adding any new backend authentication mechanism beyond Internet Identity."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

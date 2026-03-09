@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Motoko canister implementing access-controlled user profiles, balances, quotes, and USDC→GOLD swaps with admin rate updates.",
+  "feature_evidence.json": "Feature evidence report linking the multi-wallet UI update to specific frontend files and components.",
+  "frontend-file-summaries.txt": "Prewritten summaries of key frontend files related to styles, swap UI components, and hooks.",
+  "frontend/index.css": "Tailwind base layer defining OKLCH color tokens and light/dark theme variables for global styling.",
+  "frontend/index.html": "Root HTML file mounting the React app and loading the main entry script.",
+  "frontend/src/App.tsx": "Wraps the SwapPage with theme support and a global notification toaster.",
+  "frontend/src/features/swap/components/BalancesPanel.tsx": "Displays authenticated users’ USDC and GOLD balances with loading skeletons.",
+  "frontend/src/features/swap/components/ProfileSetupDialog.tsx": "Modal prompting authenticated first‑time users to save a name to their profile.",
+  "frontend/src/features/swap/components/QuotePreview.tsx": "Shows the current backend-provided USDC→GOLD exchange rate with loading state.",
+  "frontend/src/features/swap/components/SwapForm.tsx": "Form allowing authenticated users to enter USDC, preview GOLD output, and execute swaps with validation.",
+  "frontend/src/features/swap/components/WalletControls.tsx": "Provides wallet login/logout UI with Internet Identity support and placeholder MetaMask option, handling authentication state and provider selection.",
+  "frontend/src/features/swap/hooks/useSwapData.ts": "Defines React Query hooks for fetching user profile, balances, quotes, and performing swap and deposit mutations via the backend actor.",
+  "frontend/src/features/swap/SwapPage.tsx": "Main swap screen composing wallet controls, balances, swap form, quote preview, and profile setup flow.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages the authenticated or anonymous backend actor based on Internet Identity, invalidating related queries on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Implements authentication context and provider for Internet Identity, handling login, logout, identity loading, and status tracking.",
+  "frontend/src/index.css": "Sets global Tailwind layers, custom color variables, dark mode palettes, and base styling utilities.",
+  "frontend/src/main.tsx": "Bootstraps the React app with QueryClientProvider and InternetIdentityProvider, then renders App.",
+  "frontend/src/utils/urlParams.ts": "Utility functions for reading, storing, persisting, and clearing URL parameters and session-stored parameters.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme colors, fonts, animations, and enabling plugins such as typography and container queries.",
+  "project_state.json": "Contains the project’s state: feature list, new requests, architectural notes, and metadata for building a swap page supporting wallet connections and USDC→GOLD swaps."
+}

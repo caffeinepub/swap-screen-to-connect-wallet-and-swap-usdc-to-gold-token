@@ -1,0 +1,32 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-06T10:47:14.144Z",
+  "summary": "The diff implements a wallet provider selection UI on the Swap page with options for Internet Identity (functional) and MetaMask (explicitly marked unsupported via tooltip/disabled state), while continuing to use the existing Internet Identity hook. One potential gap is that the “MetaMask not supported” messaging appears to be via tooltip/toast rather than a clearly visible inline message in the wallet area (the requirement allows disabling with tooltip, so this may still satisfy AC depending on interpretation).",
+  "missing_requirements": [
+    {
+      "id": "REQ-6",
+      "requirement": "Selecting MetaMask shows an inline message (in English) such as “MetaMask login is not supported in this app yet.” and/or disables the option with an explanatory tooltip.",
+      "reason": "The diff clearly adds a tooltip (“MetaMask login is not supported yet”) and disables the connect button when MetaMask is selected, but the requested inline message in the wallet connection area is not evident from the shown code (a toast is used, but toasts are not typically considered inline). Because the file is truncated, an inline message might exist later, but it is not visible in the provided diff summary.",
+      "evidence": [
+        "frontend/src/features/swap/components/WalletControls.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Swap page footer content promoting “Built with ❤️ using caffeine.ai” and © 2026.",
+      "reason": "Not requested by REQ-6 (which is limited to wallet provider selection UI changes).",
+      "evidence": [
+        "frontend/src/features/swap/SwapPage.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.6,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/features/swap/SwapPage.tsx",
+    "frontend/src/features/swap/components/WalletControls.tsx",
+    "project_state.json"
+  ]
+}

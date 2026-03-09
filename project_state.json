@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build a web page (swap screen) that lets a user connect a wallet (including options like MetaMask) and swap USDC to a gold token.",
+  "architectural_notes": [
+    "Support multiple wallet connection/auth providers (e.g., Internet Identity plus EVM wallets like MetaMask) in the swap UI."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-swap-page-ui-that-allows-a-user-to-connect-their-wallet-internet-identity-and-perform-a-usdc-gold-swap-in-a-single-screen",
+      "title": "Create a Swap page UI that allows a user to connect their wallet (Internet Identity) and perform a USDC → GOLD swap in a single screen.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-the-swap-page-with-the-backend-via-the-generated-actor-using-the-existing-internet-identity-hooks-without-modifying-immutable-hook-files-and-display-real-time-balances-quote-and-swap-history",
+      "title": "Integrate the Swap page with the backend via the generated actor, using the existing Internet Identity hooks (without modifying immutable hook files), and display real-time balances, quote, and swap history.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-visual-theme-and-layout-for-the-swap-screen-distinct-style-consistent-typography-colors-components-without-using-a-blue-purple-palette-and-ensure-the-ui-looks-good-on-mobile-and-desktop",
+      "title": "Apply a cohesive visual theme and layout for the swap screen (distinct style, consistent typography/colors/components) without using a blue+purple palette, and ensure the UI looks good on mobile and desktop.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-image-assets-for-token-icons-and-a-subtle-background-illustration-and-render-them-in-the-ui-from-frontend-public-assets-generated-do-not-serve-images-from-the-backend",
+      "title": "Add generated static image assets for token icons and a subtle background illustration, and render them in the UI from frontend/public/assets/generated (do not serve images from the backend).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-swap-screen-wallet-connection-controls-to-present-multiple-wallet-login-options-including-an-explicit-metamask-option-while-keeping-internet-identity-as-the-only-functional-authentication-method-and-clearly-indicating-in-the-ui-that-metamask-is-not-currently-supported",
+      "title": "Update the Swap screen wallet connection controls to present multiple wallet/login options (including an explicit MetaMask option) while keeping Internet Identity as the only functional authentication method, and clearly indicating in the UI that MetaMask is not currently supported.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a swap screen web page to connect a wallet and swap USDC to a gold token",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement backend canister logic to support a simple swap flow keyed by the caller Principal: store per-user balances for \"USDC\" and \"GOLD\", return balances, provide a quote for USDC→GOLD using a fixed configurable rate, and execute swaps with validation.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Upgrade wallet connection to include additional login options such as MetaMask",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Swap screen to connect wallet and swap USDC to Gold token",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
